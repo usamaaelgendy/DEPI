@@ -7,6 +7,11 @@ ThemeData lightTheme = ThemeData(
     primaryContainer: Color(0xFFFFFFFF),
     secondary: Color(0xFF3A4640),
   ),
+  textSelectionTheme: TextSelectionThemeData(
+    cursorColor: Colors.black,
+    selectionColor: Colors.white,
+    selectionHandleColor: Colors.black,
+  ),
   scaffoldBackgroundColor: Color(0xFFF6F7F9),
   switchTheme: SwitchThemeData(
     trackColor: WidgetStateProperty.resolveWith((states) {
@@ -60,12 +65,35 @@ ThemeData lightTheme = ThemeData(
     ),
   ),
   iconTheme: IconThemeData(color: Color(0xFF161F1B)),
-  dividerTheme: DividerThemeData(color: Color(0xFFD1DAD6)),
-  textSelectionTheme: TextSelectionThemeData(
-    cursorColor: Colors.black,
-    selectionColor: Colors.white,
-    selectionHandleColor: Colors.black,
+  switchTheme: SwitchThemeData(
+    trackColor: WidgetStateProperty.resolveWith((states) {
+      if (states.contains(WidgetState.selected)) {
+        return Color(0xFF15B86C);
+      }
+      return Colors.white;
+    }),
+    thumbColor: WidgetStateProperty.resolveWith((states) {
+      if (states.contains(WidgetState.selected)) {
+        return Colors.white;
+      }
+      return Color(0xFF9E9E9E);
+    }),
+    trackOutlineColor: WidgetStateProperty.resolveWith((states) {
+      if (states.contains(WidgetState.selected)) {
+        return Colors.transparent;
+      }
+      return Color(0xFF9E9E9E);
+    }),
+    trackOutlineWidth: WidgetStateProperty.resolveWith((states) {
+      if (states.contains(WidgetState.selected)) {
+        return 0;
+      }
+      return 2;
+    }),
   ),
+
+  dividerTheme: DividerThemeData(color: Color(0xFFD1DAD6)),
+
   bottomNavigationBarTheme: BottomNavigationBarThemeData(
     backgroundColor: Color(0xFFF6F7F9),
     type: BottomNavigationBarType.fixed,
