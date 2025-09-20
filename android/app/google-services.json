@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "571836091673",
+    "firebase_url": "https://depi-test-29f61-default-rtdb.firebaseio.com",
+    "project_id": "depi-test-29f61",
+    "storage_bucket": "depi-test-29f61.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:571836091673:android:d50da4d12b29c92944c988",
+        "android_client_info": {
+          "package_name": "com.elgendy.firebase_test"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "571836091673-nmsd4bue2p3q1mtcsk1pheptc1mioi6n.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAH2Sh6uP1NF_t0weYgEyJ1UN6YUj5wycI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "571836091673-nmsd4bue2p3q1mtcsk1pheptc1mioi6n.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "571836091673-vb7pmmh8c1h967l8m6pga03cn0gna8ht.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.elgendy.firebaseTest"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
