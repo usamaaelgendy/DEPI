@@ -10,8 +10,6 @@ class AuthScreen extends StatelessWidget {
     return Scaffold(
       body: SignInScreen(
         providers: [EmailAuthProvider() , GoogleProvider(clientId: 'project-571836091673')],
-
-
         headerBuilder: (context, constraints, shrinkOffset) {
           return const Padding(
             padding: EdgeInsets.all(20),
@@ -28,6 +26,15 @@ class AuthScreen extends StatelessWidget {
               action == AuthAction.signIn
                   ? 'Welcome, please sign in!'
                   : 'Welcome, please sign up!',
+            ),
+          );
+        },
+        footerBuilder: (context, action) {
+          return const Padding(
+            padding: EdgeInsets.only(top: 16),
+            child: Text(
+              'By signing in, you agree to our T&C.',
+              style: TextStyle(color: Colors.grey),
             ),
           );
         },
